@@ -1,0 +1,18 @@
+{
+  "name": "wpscholar/wp-post-expiration",
+  "description": "A WordPress module that makes it easy to add support for post expiration to any post type.",
+  "type": "library",
+  "license": "GPL-2.0+",
+  "authors": [
+    {
+      "name": "Micah Wood",
+      "email": "micah@wpscholar.com",
+      "homepage": "http://wpscholar.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "wpscholar\\": ""
+    }
+  }
+}
