@@ -51,7 +51,9 @@ class PostExpiration {
 	 * @internal
 	 */
 	public static function _renderMetaBox() {
-		$module_url = home_url( str_replace( ABSPATH, '', __DIR__ ) );
+		if ( ! defined( 'WPSCHOLAR_POST_EXPIRATION_URL' ) ) {
+			define( 'WPSCHOLAR_POST_EXPIRATION_URL', plugins_url( '', __FILE__ ) );
+		}
 		?>
         <label>
             <span>Expiration Date / Time</span>
@@ -103,9 +105,12 @@ class PostExpiration {
             });
         </script>
 		<?php
-		wp_enqueue_script( 'moment', $module_url . '/assets/moment.js' );
-		wp_enqueue_script( 'filthypillow', $module_url . '/assets/jquery.filthypillow.min.js', [ 'jquery', 'moment' ] );
-		wp_enqueue_style( 'filthypillow', $module_url . '/assets/jquery.filthypillow.css' );
+		wp_enqueue_script( 'moment', WPSCHOLAR_POST_EXPIRATION_URL . '/assets/moment.js' );
+		wp_enqueue_script( 'filthypillow', WPSCHOLAR_POST_EXPIRATION_URL . '/assets/jquery.filthypillow.min.js', [
+			'jquery',
+			'moment'
+		] );
+		wp_enqueue_style( 'filthypillow', WPSCHOLAR_POST_EXPIRATION_URL . '/assets/jquery.filthypillow.css' );
 		wp_nonce_field( 'set_post_expiration', 'post_expiration_nonce' );
 	}
 
