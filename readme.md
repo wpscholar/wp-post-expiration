@@ -12,7 +12,7 @@ A WordPress module that makes it easy to add support for post expiration to any 
 Add the module to your code base via [Composer](https://getcomposer.org/)
 
 ```SHELL
-composer require wpscholar/wp-post-expirator
+composer require wpscholar/wp-post-expiration
 ```
 
 ## Initialization
