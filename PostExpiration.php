@@ -1,6 +1,6 @@
 <?php
 
-namespace wpscholar;
+namespace wpscholar\WordPress;
 
 /**
  * Class PostExpiration
