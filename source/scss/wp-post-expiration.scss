@@ -1,0 +1,32 @@
+.wp-post-expiration {
+
+  &__label-text {
+    display: block;
+  }
+
+  &__field {
+    position: relative;
+  }
+
+  &__input {
+
+    display: block;
+    width: 100%;
+
+    &[readonly] {
+      background-color: white;
+    }
+
+  }
+
+  &__reset {
+    color: gray;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 20px;
+    position: absolute;
+    right: 6px;
+    top: 3px;
+  }
+
+}
