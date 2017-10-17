@@ -15,7 +15,7 @@
       "functions.php"
     ],
     "psr-4": {
-      "wpscholar\\WordPress": ""
+      "wpscholar\\WordPress\\": ""
     }
   }
 }
