@@ -17,10 +17,10 @@ composer require wpscholar/wp-post-expiration
 
 ## Initialization
 
-Add this line to your code to enable the module for use with post type support:
+If you are adding the code to a WordPress plugin or theme, there is no initialization step needed. However, if you are adding the code at a higher level in your WordPress project, you will need to call the initialization function on the init hook, like so:
 
 ```PHP
-add_action( 'init', 'wpscholar\PostExpiration::initialize', 99 );
+add_action( 'init', 'wpscholar_post_expiration_initialize', 1000 );
 ```
 
 ## Adding Post Type Support
@@ -40,5 +40,6 @@ Or, in the `supports` argument when registering a post type, just add `'expirati
 The following static methods are publicly available:
 
 - `setExpiration( $post_id, $expiration )` - Set expiration for a specific post. Expiration is a Unix timestamp.
+- `removeExpiration( $post_id )` - Remove expiration for a specific post.
 - `expirePost( $post_id )` - Immediately expire a specific post.
 - `expirePosts()` - Expire all posts. (Limit 100 per run per post type)
