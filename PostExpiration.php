@@ -76,7 +76,7 @@ class PostExpiration {
 	public static function _loadAssets() {
 
 		if ( ! defined( 'WPSCHOLAR_POST_EXPIRATION_URL' ) ) {
-			define( 'WPSCHOLAR_POST_EXPIRATION_URL', home_url( '/' . str_replace( ABSPATH, '', __DIR__ ) ) );
+			define( 'WPSCHOLAR_POST_EXPIRATION_URL', plugins_url( '', __FILE__ ) );
 		}
 
 		$suffix = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
