@@ -31,6 +31,6 @@
     "sass-loader": "^6.0.6",
     "sass-mq": "^3.3.2",
     "style-loader": "^0.18.2",
-    "webpack": "^3.6.0"
+    "webpack": "^4.0.0"
   }
 }
